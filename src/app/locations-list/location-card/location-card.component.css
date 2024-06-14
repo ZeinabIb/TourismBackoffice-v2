@@ -1,0 +1,126 @@
+.container {
+    width: 50%;
+}
+
+.card {
+    width: 404px;
+    height: 179px;
+    background-color: #FFFFFF;
+    border: 1px solid rgb(237, 237, 237);
+    margin: 10px 0; 
+    box-shadow: 0px 4px 24px 0px #0000000D;
+    border-radius: 12px;
+}
+
+
+
+
+.card-body {
+    width: 357px;
+    height: 141px;
+    top: 23px;
+    left: 16px;
+    gap: 15px;
+    opacity: 0px;
+    margin: 15PX;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-title {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    text-align: left;
+    color: #0F1729;
+}
+
+.card-text {
+    margin: 10px 0 0 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    color: #909090;
+}
+
+.rating-container {
+    width: 167px;
+    height: 19px;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    gap:4px
+}
+
+.card-rating {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    text-align: left;
+}
+
+.fa-star{
+    width: 19px;
+    height: 19px;
+    color: #FBBC05;
+
+}
+
+.cat-container {
+    width: 137px;
+    height: 39px;
+    padding:10px, 15px, 10px, 15px;
+    gap: 10px;
+    border-radius: 50px;
+    background: #F4F7F6;
+   align-content: center;
+    
+}
+
+.cat-content{
+    display: flex;
+    align-items: center;
+    width: 107px;
+    height: 19px;
+    gap:7px;
+    margin-left: 10px;
+    
+}
+
+.cat-container p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    color: #007FF7;
+}
+
+.cat-container i {
+    color: #007FF7;
+}
+
+.fa-trash{
+    width: 19px;
+    height: 19px;
+    color: #007FF7;
+
+  
+
+}
+
+.card.selected {
+    background: #F5FAFF;
+    border: 0.5px solid #007FF7;
+    box-shadow: 0px 4px 24px 0px #0000000D;
+  }
+  

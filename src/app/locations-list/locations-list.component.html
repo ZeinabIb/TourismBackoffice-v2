@@ -1,0 +1,12 @@
+
+<div class="header">
+    <h1 class="title">List of Places</h1>
+    <app-search></app-search>
+    <app-filter></app-filter>
+</div>
+
+<div class="container">
+    <div *ngFor="let location of dummyLocation" class="card">
+        <app-location-card [location]="location"></app-location-card>
+    </div>
+</div>

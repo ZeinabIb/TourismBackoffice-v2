@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="card" >
+        <div class="card-body">
+            <div class="title-container">
+                <h5 class="card-title">{{ getLocationName(location) }}</h5>
+                <i class="fa-solid fa-trash"></i>
+            </div>
+            <p class="card-text">{{ getLocationAddress(location) }}</p>
+            <div class="rating-container">
+                <i class="fa-solid fa-star"></i>
+                <p class="card-rating">{{ getLocationRating(location) }}</p>
+            </div>
+            <div class="cat-container">
+                <div class="cat-content">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <p class="card-cat">{{ location.subcategories[0].display_name }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

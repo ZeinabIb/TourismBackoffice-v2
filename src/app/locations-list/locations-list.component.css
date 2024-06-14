@@ -1,0 +1,33 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height:45px;
+    top: 95px;
+    left: 30px;
+    gap: 24px;
+    opacity: 0px;
+
+  
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    overflow: auto;
+    height: 85vh; 
+ 
+  }
+
+  .title{
+    font-family: 'Inter', sans-serif;
+font-size: 24px;
+font-weight: 600;
+line-height: 36px;
+color:  #000000;
+margin-left: 5px;
+
+  }
+
+  
