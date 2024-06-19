@@ -1,1 +1,23 @@
-<p>image-upload works!</p>
+
+
+
+  <div class="container">
+    <div class="c-1">
+        <div class="image-upload-container">
+            <input type="file" id="file-input" class="file-input" accept="image/*" (change)="onFileSelected($event)" />
+            <button type="button" class="upload-button" (click)="triggerFileInput()">
+             
+              <div class="text"> <i class="fa-solid fa-file-arrow-up"></i> Choose File</div>
+            </button>
+            <p>Recommended format: PNG, JPEG. </p>
+           
+            <div *ngIf="imageUrl" class="image-preview">
+              <img [src]="imageUrl" alt="Image Preview" class="preview-image" />
+            </div>
+          </div>
+    </div>
+
+    <div class="c-2">
+        <button type="button" id="add-image-btn">+ Add another image</button>
+    </div>
+  </div>

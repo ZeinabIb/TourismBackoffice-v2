@@ -27,6 +27,7 @@
   .flex-container {
     display: flex;
     justify-content: space-between;
+    
   }
   
   .flex-container label {
@@ -44,19 +45,7 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
-  
-  button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    color: white;
-   
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+}
 
 #name {
     height: 40px;
@@ -125,5 +114,43 @@
 }
 
 
+#short-desc::placeholder{
+    padding: 10px;
+    color: #D9D9D9
+}
 
-  
+#long-desc::placeholder{
+    padding: 10px;
+    color: #D9D9D9
+}
+
+.cat-container{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap:5px;
+  margin-left: 3px;
+  height: 40px;
+}
+
+.cat {
+  width: 50%;
+}
+
+.subcat{
+  width: 50%;
+}
+
+.save-btn{
+  width: 250px;
+height: 49px;
+border-radius: 10px;
+border: none;
+background-color: #007ff7;
+
+font-family: 'Inter', sans-serif;
+color: white;
+font: 600;
+font-size: 16px;
+cursor: pointer;
+}

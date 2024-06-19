@@ -9,6 +9,9 @@ import { SearchBarComponent } from './locations-list/search-bar/search-bar.compo
 import { FilterComponent } from './locations-list/filter/filter.component';
 import { CategoriesComponent } from './locations-form/categories/categories.component';
 import { SubcategoriesComponent } from './locations-form/subcategories/subcategories.component';
+import { ImageUploadComponent } from './locations-form/image-upload/image-upload.component';
+import { ImagePreviewComponent } from './locations-form/image-preview/image-preview.component';
+import { AddedFeaturesComponent } from './locations-form/added-features/added-features.component';
 
 
 @NgModule({
@@ -22,6 +25,9 @@ import { SubcategoriesComponent } from './locations-form/subcategories/subcatego
     FilterComponent,
     CategoriesComponent,
     SubcategoriesComponent,
+    ImageUploadComponent,
+    ImagePreviewComponent,
+    AddedFeaturesComponent
   ],
   imports: [
     BrowserModule
