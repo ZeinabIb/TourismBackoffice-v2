@@ -9,6 +9,7 @@
     gap: 24px;
     opacity: 0px;
 
+
   
 }
 
@@ -17,6 +18,7 @@
     grid-template-columns: repeat(2, 1fr); 
     overflow: auto;
     height: 85vh; 
+
  
   }
 
@@ -28,6 +30,14 @@ line-height: 36px;
 color:  #000000;
 margin-left: 5px;
 
+
+  }
+
+  .search-and-filter{
+
+
+    display: flex;
+    align-items: center;
   }
 
   
