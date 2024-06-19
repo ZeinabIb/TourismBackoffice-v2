@@ -1,0 +1,62 @@
+.form-container {
+   
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  
+  .form-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 36px;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  
+ 
+input {
+    height: 40px;
+    border-radius: 8px;
+    margin: 3px;
+    border: 1px solid #D9D9D9;
+    width: 100%;
+}
+select{
+    height: 40px;
+    border-radius: 8px;
+    margin: 3px;
+    border: 1px solid #D9D9D9;
+    width: 100%;
+
+}
+
+input::placeholder{
+    padding: 10px;
+    color: #D9D9D9
+}
+.flex-container{
+    display: flex;
+    justify-content: flex-start;
+    gap: 25px;
+    width: 100%;
+
+}
+.np{
+    width: 48%;
+
+}
+
+.ip{
+    width: 48%;
+
+
+}
+#national-phone{
+    width: 100%
+}
+
+#international-phone{
+    width: 100%;
+    
+}
