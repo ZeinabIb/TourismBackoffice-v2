@@ -10,7 +10,8 @@
 
 .form-container {
   width: 43%;
-  background-color: rgb(228, 202, 202);
+  box-shadow: 0px 4px 24px 0px #0000000D;
+
 }
 
 /* Media query for bigger screens */

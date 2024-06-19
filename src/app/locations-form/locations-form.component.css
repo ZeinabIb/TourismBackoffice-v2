@@ -1,0 +1,129 @@
+.form-container {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .form-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  
+  .form-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .flex-container label {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .flex-container input {
+    flex: 2;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+   
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+#name {
+    height: 40px;
+    border-radius: 8px;
+    margin: 3px;
+    border: 1px solid #D9D9D9;
+    width: 100%;
+}
+
+#name::placeholder{
+    padding: 10px;
+    color: #D9D9D9
+}
+
+#longitude{
+    height: 40px;
+    border-radius: 8px;
+    margin: 3px;
+    border: 1px solid #D9D9D9
+}
+
+#latitude{
+    height: 40px;
+    border-radius: 8px;
+    margin: 3px;
+    border: 1px solid #D9D9D9
+}
+
+#longitude::placeholder{
+    padding: 10px;
+    color: #D9D9D9
+}
+
+#latitude::placeholder{
+    padding: 10px;
+    color: #D9D9D9
+}
+
+#address{
+    height: 40px;
+    border-radius: 8px;
+    margin: 3px;
+    border: 1px solid #D9D9D9;
+    width: 100%;
+}
+
+#address::placeholder{
+    padding: 10px;
+    color: #D9D9D9
+}
+
+#short-desc{
+    height: 80px;
+    border-radius: 8px;
+    margin: 3px;
+    border: 1px solid #D9D9D9;
+    width: 100%;
+}
+
+#long-desc{
+    height: 80px;
+    border-radius: 8px;
+    margin: 3px;
+    border: 1px solid #D9D9D9;
+    width: 100%;
+}
+
+
+
+  

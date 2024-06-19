@@ -7,6 +7,8 @@ import { LocationCardComponent } from './locations-list/location-card/location-c
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SearchBarComponent } from './locations-list/search-bar/search-bar.component';
 import { FilterComponent } from './locations-list/filter/filter.component';
+import { CategoriesComponent } from './locations-form/categories/categories.component';
+import { SubcategoriesComponent } from './locations-form/subcategories/subcategories.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { FilterComponent } from './locations-list/filter/filter.component';
     LocationCardComponent,
     NavBarComponent,
     SearchBarComponent,
-    FilterComponent
+    FilterComponent,
+    CategoriesComponent,
+    SubcategoriesComponent,
   ],
   imports: [
     BrowserModule
