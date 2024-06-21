@@ -12,6 +12,10 @@ import { SubcategoriesComponent } from './locations-form/subcategories/subcatego
 import { ImageUploadComponent } from './locations-form/image-upload/image-upload.component';
 import { ImagePreviewComponent } from './locations-form/image-preview/image-preview.component';
 import { AddedFeaturesComponent } from './locations-form/added-features/added-features.component';
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth.guard';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -27,12 +31,15 @@ import { AddedFeaturesComponent } from './locations-form/added-features/added-fe
     SubcategoriesComponent,
     ImageUploadComponent,
     ImagePreviewComponent,
-    AddedFeaturesComponent
+    AddedFeaturesComponent,
+    LocationsFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
