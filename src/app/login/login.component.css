@@ -1,0 +1,125 @@
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+
+  }
+  
+  .login-container {
+    display: flex;
+    height:100vh;
+    overflow: hidden;
+
+
+  }
+  p{
+    font-family: 'Inter', sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 19.36px;
+text-align: left;
+color: #909090;
+
+
+  }
+  .image-container {
+    width: 70%;
+  }
+
+  img{
+    width: 100%;
+    height: 100vh;
+  }
+
+  .form-container{
+    width: 30%;
+
+    margin: 60px;
+  }
+  
+  form {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .btn {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+
+  .form-title{
+    margin-top: 30%;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  #username{
+    height: 40px;
+    border-radius: 8px;
+    margin: 3px;
+    border: 1px solid #D9D9D9;
+    width: 100%;
+  }
+
+  #password{
+    height: 40px;
+    border-radius: 8px;
+    margin: 3px;
+    border: 1px solid #D9D9D9;
+    width: 100%;
+  }
+
+  .password-container {
+    position: relative;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  button{
+width: 100%;
+padding: 16px 8px 16px 8px;
+gap: 8px;
+border-radius: 8px;
+opacity: 0px;
+
+  }
+

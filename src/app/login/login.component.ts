@@ -10,7 +10,7 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
-
+  showPassword = false;
   constructor(private fb: FormBuilder, private authService: AuthService) {}
 
   ngOnInit(): void {
@@ -27,5 +27,9 @@ export class LoginComponent implements OnInit {
         alert('Login failed');
       }
     }
+  }
+
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
   }
 }

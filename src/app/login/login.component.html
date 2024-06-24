@@ -1,13 +1,29 @@
 <div class="login-container">
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="username">Username</label>
-      <input type="text" id="username" formControlName="username" class="form-control" required>
-    </div>
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" id="password" formControlName="password" class="form-control" required>
-    </div>
-    <button type="submit" class="btn btn-primary">Login</button>
-  </form>
+  <div class="image-container">
+    <img src="./assets/paris-login.jpg" alt="Login Image">
+  </div>
+  <div class="form-container">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <h1 class="form-title">Login</h1>
+        <p>Login to add or edit places</p>
+        <input type="text" id="username" formControlName="username" placeholder="Username" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <div class="password-container">
+          <input [type]="showPassword ? 'text' : 'password'" id="password" formControlName="password" placeholder="Password" class="form-control" required>
+          <i class="toggle-password" (click)="togglePasswordVisibility()">
+            <span *ngIf="showPassword">
+              <i class="fa-regular fa-eye-slash"></i>
+            </span>
+            <span *ngIf="!showPassword">
+              <i class="fa-regular fa-eye"></i>
+            </span>
+          </i>
+        </div>
+      </div>
+      <p id="forgot-pass">Forgot password</p>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  </div>
 </div>
