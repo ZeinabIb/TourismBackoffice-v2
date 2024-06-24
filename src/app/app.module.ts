@@ -16,6 +16,8 @@ import { AuthService } from './auth.service';
 import { AuthGuard } from './auth.guard';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { LoginComponent } from './login/login.component';
+import { MainComponent } from './main/main.component';
 
 
 @NgModule({
@@ -32,14 +34,19 @@ import { AppRoutingModule } from './app-routing.module';
     ImageUploadComponent,
     ImagePreviewComponent,
     AddedFeaturesComponent,
-    LocationsFormComponent
+    LocationsFormComponent,
+    LoginComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
+    
   ],
   providers: [AuthService, AuthGuard],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [LocationsListComponent, LocationsFormComponent]
 })
 export class AppModule { }
