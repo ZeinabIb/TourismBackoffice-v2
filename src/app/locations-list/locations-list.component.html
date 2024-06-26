@@ -11,4 +11,33 @@
     <div *ngFor="let location of locations" class="card">
         <app-location-card [location]="location"></app-location-card>
     </div>
+
 </div>
+
+<div
+class="pagination"
+[ngClass]="{ 'pagination-large': pages.length > pageThreshold }"
+>
+<button class="btn pagbtn" (click)="onBackClick()">
+ <i
+  class="fas fa-arrow-left"
+ 
+ ></i>
+</button>
+<button
+  class="btn "
+  *ngFor="let page of pages"
+  [class.active]="page === currentPage"
+  (click)="onPageChange(page)"
+>
+  {{ page }}
+</button>
+<button class="btn  pagbtn" (click)="onNextClick()">
+  <i
+  class="fas fa-arrow-right"
+ 
+ ></i>
+</button>
+</div>
+
+

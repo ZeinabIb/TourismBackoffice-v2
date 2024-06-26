@@ -41,3 +41,34 @@ margin-left: 5px;
   }
 
   
+
+.pagination {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+
+  margin-top: 50px;
+  justify-content: center;
+}
+
+
+
+.btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 18px;
+  font-size: 16px;
+  color: #0F1729;
+}
+
+.btn.active {
+  font-weight: bold;
+}
+
+.data-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
