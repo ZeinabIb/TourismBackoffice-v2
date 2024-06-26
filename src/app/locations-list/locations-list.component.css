@@ -72,3 +72,8 @@ margin-left: 5px;
   gap: 10px;
 }
 
+.card.selected {
+  border: 2px solid #007bff; 
+  background-color: #e9f7fe; 
+}
+

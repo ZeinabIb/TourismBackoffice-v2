@@ -1,57 +1,52 @@
 import { Component } from '@angular/core';
-import { Location } from '../models/Location.model';
+import { Location  } from '../models/Location.model';
 import { LocationsListService } from '../services/locations-list.service';
-
+import { SharedLocationService } from '../services/shared-location.service';
 
 @Component({
   selector: 'app-locations-list',
   templateUrl: './locations-list.component.html',
-  styleUrl: './locations-list.component.css'
+  styleUrls: ['./locations-list.component.css']
 })
 export class LocationsListComponent {
+  currentPage = 1;
+  totalPages = 1;
+  pages: number[] = [];
+  pageThreshold = 3;
 
+  locations: Location[] = [];
+  selectedLocation: Location | null = null;
 
+  constructor(private locationService: LocationsListService,
+    private sharedLocationService: SharedLocationService 
+  ) {
+    this.refreshLocation();
+  }
 
-//PAGINATION
-currentPage = 1;
-totalPages = 1;
-pages: number[] = [];
-pageThreshold: number = 3;
+  selectLocation(location: Location): void {
+    this.selectedLocation = location;
+    console.log('Selected location:', location); 
+    this.sharedLocationService.setSelectedLocation(location);
+  }
 
-//Location 
-locations:Location[] = []
+  isSelected(location: Location): boolean {
+    return this.selectedLocation === location;
+  }
 
-constructor(
-  private locationService : LocationsListService,
-){
-  this.refreshLocation();
-}
+  refreshLocation(pageNumber: number = 1) {
+    this.locationService.getLocations(pageNumber).subscribe(
+      (data: any) => {
+        this.locations = data.data;
+        this.totalPages = Math.ceil(this.locations[0].total_records / this.locations[0].page_size);
+        this.generatePages();
+      },
+      error => {
+        console.error('Failed to fetch locations:', error);
+      }
+    );
+  }
 
-
-
-//GET LIST OF LOCATIONS
-refreshLocation(pageNumber: number = 1) {
-  this.locationService.getLocations(pageNumber).subscribe(
-    (data: any) => {
-      this.locations = data.data;
-      console.log(
-        Math.ceil(
-          this.locations[0].total_records / this.locations[0].page_size
-        )
-      );
-      this.totalPages = Math.ceil(
-        this.locations[0].total_records / this.locations[0].page_size
-      );
-      this.generatePages();
-    },
-    (error: any) => {
-      console.error('Failed to fetch locations:', error);
-    }
-  );
-}
-
-generatePages(): void {
-    console.log('JEANNNN ' + this.totalPages);
+  generatePages(): void {
     this.pages = Array.from({ length: this.totalPages }, (_, i) => i + 1);
   }
 
@@ -73,5 +68,4 @@ generatePages(): void {
       this.refreshLocation(this.currentPage);
     }
   }
-
 }

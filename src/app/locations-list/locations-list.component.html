@@ -8,21 +8,22 @@
 </div>
 
 <div class="container">
-    <div *ngFor="let location of locations" class="card">
-        <app-location-card [location]="location"></app-location-card>
+    <div *ngFor="let location of locations" 
+         [ngClass]="{'selected': isSelected(location)}" 
+         (click)="selectLocation(location)">
+      <app-location-card [location]="location" [isSelected]="isSelected(location)"></app-location-card>
     </div>
+  </div>
+  
+  
 
-</div>
+  
 
-<div
+<div 
 class="pagination"
-[ngClass]="{ 'pagination-large': pages.length > pageThreshold }"
->
+[ngClass]="{ 'pagination-large': pages.length > pageThreshold }">
 <button class="btn pagbtn" (click)="onBackClick()">
- <i
-  class="fas fa-arrow-left"
- 
- ></i>
+ <i class="fas fa-arrow-left"></i>
 </button>
 <button
   class="btn "
@@ -33,11 +34,6 @@ class="pagination"
   {{ page }}
 </button>
 <button class="btn  pagbtn" (click)="onNextClick()">
-  <i
-  class="fas fa-arrow-right"
- 
- ></i>
+  <i class="fas fa-arrow-right"></i>
 </button>
 </div>
-
-
