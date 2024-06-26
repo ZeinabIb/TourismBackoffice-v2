@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,6 +10,7 @@ import { AuthService } from '../auth.service';
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   showPassword = false;
+
   constructor(private fb: FormBuilder, private authService: AuthService) {}
 
   ngOnInit(): void {
@@ -23,9 +23,15 @@ export class LoginComponent implements OnInit {
   onSubmit(): void {
     if (this.loginForm.valid) {
       const { username, password } = this.loginForm.value;
-      if (!this.authService.login(username, password)) {
-        alert('Login failed');
-      }
+      this.authService.login(username, password, "device_id").subscribe(
+        (userToken) => {
+          console.log('Login successful', userToken);
+        },
+        (error) => {
+          alert('Login failed');
+          console.error('Login error', error);
+        }
+      );
     }
   }
 
